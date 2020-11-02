@@ -130,3 +130,5 @@ dmypy.json
 
 # Vagrant
 .vagrant/
+
+nohup.out
