@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Message
+from .forms import MessageForm
 
 def board(request):
     messages = Message.objects.order_by('-date')
