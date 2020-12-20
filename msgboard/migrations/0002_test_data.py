@@ -8,16 +8,16 @@ class Migration(migrations.Migration):
 
     def generate_data(apps, schema_editor):
         from msgboard.models import Message
-        
+
         test_data = [
-            ('Test User1', 'A simple test message'),
-            ('Test User2', 'Another simple test message'),
+                    ('Test User1', 'A simple test message'),
+                    ('Test User2', 'Another simple test message'),
         ]
 
         with transaction.atomic():
             for author, text in test_data:
-            Message(author=author, text=text).save()
+                Message(author=author, text=text).save()
 
-        operations = [
+    operations = [
             migrations.RunPython(generate_data),
-        ]
+    ]
