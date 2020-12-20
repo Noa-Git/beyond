@@ -10,8 +10,8 @@ class Migration(migrations.Migration):
         from msgboard.models import Message
 
         test_data = [
-                ('Test User1', 'A simple test message'),
-                ('Test User2', 'Another simple test message'),
+            ('Test User1', 'A simple test message'),
+            ('Test User2', 'Another simple test message'),
         ]
 
         with transaction.atomic():
