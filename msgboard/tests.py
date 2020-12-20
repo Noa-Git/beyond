@@ -1,4 +1,4 @@
-import pytest
+# import pytest
 
 def test_with_authenticated_client(client, django_user_model):
     username = "admin"
