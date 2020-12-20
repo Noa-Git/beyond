@@ -19,5 +19,5 @@ class Migration(migrations.Migration):
                 Message(author=author, text=text).save()
 
     operations = [
-            migrations.RunPython(generate_data),
+        migrations.RunPython(generate_data),
     ]
