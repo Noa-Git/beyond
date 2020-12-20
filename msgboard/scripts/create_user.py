@@ -7,4 +7,3 @@ if not users.objects.filter(username='user1').exists():
     user=User.objects.create_user('user1', password='123456')
     user.is_staff=True
     user.save()
-    
