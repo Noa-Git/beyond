@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Message
 from .forms import MessageForm
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def board(request):
     messages = Message.objects.order_by('-date')
     if request.method == "POST":

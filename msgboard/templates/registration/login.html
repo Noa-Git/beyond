@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Beyond login</title>
+ 
+<h2>Login</h2>
+</head>
+ 
+<body>
+    {% extends 'base_board.html' %}
+ 
+    {% block content %}
+     
+    <h2>Beyond Login</h2>
+     
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+    </form>
+    <a href="{% url 'board' %}">Home</a>
+    {% endblock %}    
+</body>
+</html>
